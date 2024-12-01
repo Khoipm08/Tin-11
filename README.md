@@ -86,12 +86,12 @@ Bảng tên khách hàng lưu trữ thông tin về khách hàng với các cộ
 
 ### Đơn sách
 
-| Id | Bid | ngaymuon |
+| Id | Bid | NgayMuon |
 |---|---|---|
 | 10 | 19 | 2023-07-11 |
 | 9 | 18 | 2023-10-13 |
 | ... | ... | ... |
-Bảng đơn sách lưu trữ thông tin về các đơn mượn sách với các cột thuộc tính là mã đơn sách (id), mã sách (bid) và ngày mượn (ngaymuon).
+Bảng đơn sách lưu trữ thông tin về các đơn mượn sách với các cột thuộc tính là mã đơn sách (id), mã sách (bid) và ngày mượn (NgayMuon).
 
 ## 2. Code
 
@@ -239,7 +239,7 @@ SELECT bid, s.tensach Tên_sách, t.theloai Thể_loại FROM sach s LEFT JOIN t
 SELECT bid, s.tensach Tên_sách, a.hovaten Tác_giả FROM sach s LEFT JOIN tacgia a ON s.aid = a.aid LIMIT 5;
 ```
 
-#### Output:
+Outputs
 
 ```
 +-----+--------------------------+
@@ -291,7 +291,7 @@ SELECT bid, s.tensach Tên_sách, a.hovaten Tác_giả FROM sach s LEFT JOIN tac
 
 ### 3 truy vấn nâng cao
 
-```SQL
+```sql
 -- Truy vấn thể loại và tác giả của cuốn sách mà khách hàng đang mượn
 SELECT no.id id, khachhang.hovaten Họ_và_tên_khách_hàng, theloai.theloai Thể_loại, tacgia.hovaten Tác_giả FROM no 
 LEFT JOIN khachhang ON no.id = khachhang.id
@@ -314,7 +314,7 @@ SELECT k.id id, k.hovaten Họ_và_tên_khách_hàng, COUNT(no.id) Số_sách_đ
 LEFT JOIN khachhang k ON no.id = k.id GROUP BY k.id LIMIT 5;
 ```
 
-#### Output:
+Outputs
 
 ```
 +----+----------------------------+-----------------+--------------------------+
