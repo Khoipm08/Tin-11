@@ -1,3 +1,16 @@
+<style>
+    table {
+        width: 100%;
+    }
+    body{
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    h3, h1 {
+      text-align: center;
+    }
+</style>
+
 # Báo cáo tin học lớp 11A1<br/>Năm học 2024-2025
 <br/>
 
