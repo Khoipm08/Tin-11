@@ -22,6 +22,7 @@
 |2|Nguyễn Thị Thanh Mai| - Tìm dữ liệu. <br/>- Viết SQL phần thêm dữ liệu. |
 |3|Nguyễn Trọng Nghĩa| - Viết báo cáo. <br/>- Viết SQL tạo bảng. |
 |4|Ngô Nguyễn Nguyên Như| - Tìm dữ liệu. <br/>- Viết SQL truy xuất đơn giản. |
+
 <br/>
 
 ## 1. Bài toán quản lí
@@ -36,6 +37,7 @@
 - Dưới đây là mô hình dữ liệu quan hệ:
 
 ### Thể loại
+
 | Gid | TheLoai |
 |---|---|
 | BK | Bi kịch |
@@ -63,6 +65,7 @@ Bảng Tác giả lưu trữ tên của các tác giả với các cột thuộc
 Bảng Hạn mức lưu trữ số lượng ngày được mượn sách với các cột thuộc tính là mã ngày (Did) và số ngày tối đa được mượn hay còn gọi là hạn mức (HanMuc).
 
 ### Sách
+
 | Bid | TenSach | Gid | Did | Aid |
 |---|---|---|---|---|
 | 001 | Anna Karenina | TT | 300 | 3 |
@@ -72,6 +75,7 @@ Bảng Hạn mức lưu trữ số lượng ngày được mượn sách với c
 Bảng Tên sách và bảng Thể loại có chung thuộc tính Gid, bên cạnh đó bảng Tên sách và bảng Tác giả có chung thuộc tính Aid, cuối cùng bảng Tên sách và bảng Hạn mức có chung thuộc tính Did.
 
 ### Khách hàng
+
 | Id | TenKhachHang | NgayDangKy | NgayHetHan |
 |---|---|---|---|
 | 1 | Nguyễn Văn A | 2023/01/01 | 2024/12/31 |
@@ -82,7 +86,7 @@ Bảng tên khách hàng lưu trữ thông tin về khách hàng với các cộ
 
 ### Đơn sách
 
-| id | bid | ngaymuon |
+| Id | Bid | ngaymuon |
 |---|---|---|
 | 10 | 19 | 2023-07-11 |
 | 9 | 18 | 2023-10-13 |
@@ -90,7 +94,9 @@ Bảng tên khách hàng lưu trữ thông tin về khách hàng với các cộ
 Bảng đơn sách lưu trữ thông tin về các đơn mượn sách với các cột thuộc tính là mã đơn sách (id), mã sách (bid) và ngày mượn (ngaymuon).
 
 ## 2. Code
+
 ### Khởi tạo cơ sở dữ liệu
+
 ```sql
 CREATE TABLE khachhang (
   id INT NOT NULL AUTO_INCREMENT,
@@ -140,6 +146,7 @@ CREATE TABLE no (
 ```
 
 ### Thêm dữ liệu mẫu vào cơ sở dữ liệu
+
 ```sql
 INSERT INTO tacgia(hovaten) VALUES 
 ("William Shakespeare"),
@@ -214,6 +221,7 @@ LIMIT 12;
 ```
 
 ### 5 truy vấn đơn giản
+
 ```sql
 -- Truy vấn 5 tác giả đầu
 SELECT aid, hovaten Tác_giả FROM tacgia LIMIT 5;
@@ -232,6 +240,7 @@ SELECT bid, s.tensach Tên_sách, a.hovaten Tác_giả FROM sach s LEFT JOIN tac
 ```
 
 #### Output:
+
 ```
 +-----+--------------------------+
 | aid | Tác_giả                  |
