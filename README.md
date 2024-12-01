@@ -9,17 +9,7 @@
     h1 {
       text-align: center;
     }
-    #toc {
-      position: fixed;
-      right: calc((100% - 800px)/2)
-      height: 50px;
-      background-color: #f2f2f2;
-      width: 50px;
-      padding: 10px;
-    }
 </style>
-
-<div id='toc'></div>
 
 <h1> Báo cáo tin học lớp 11A1<br/>Năm học 2024-2025</h1>
 
