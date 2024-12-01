@@ -6,15 +6,28 @@
       max-width: 700px;
       margin: 0 auto;
     }
-    h3, h1 {
+    h1 {
       text-align: center;
     }
 </style>
 
-# Báo cáo tin học lớp 11A1<br/>Năm học 2024-2025
-<br/>
+<h1> Báo cáo tin học lớp 11A1<br/>Năm học 2024-2025</h1>
 
-### Bảng phân công việc nhóm
+- [Bảng phân công việc nhóm](#bảng-phân-công-việc-nhóm)
+- [1. Bài toán quản lí](#1-bài-toán-quản-lí)
+  - [a. Thể loại](#a-thể-loại)
+  - [b. Tác giả](#b-tác-giả)
+  - [c. Hạn mức](#c-hạn-mức)
+  - [d. Sách](#d-sách)
+  - [e. Khách hàng](#e-khách-hàng)
+  - [f. Đơn sách](#f-đơn-sách)
+- [2. Code](#2-code)
+  - [a. Khởi tạo cơ sở dữ liệu](#a-khởi-tạo-cơ-sở-dữ-liệu)
+  - [b. Thêm dữ liệu mẫu vào cơ sở dữ liệu](#b-thêm-dữ-liệu-mẫu-vào-cơ-sở-dữ-liệu)
+  - [c. 5 truy vấn đơn giản](#c-5-truy-vấn-đơn-giản)
+  - [d. 3 truy vấn nâng cao](#d-3-truy-vấn-nâng-cao)
+
+## Bảng phân công việc nhóm
 
 | STT | Họ và tên | Nội dung công việc |
 |-|-|-|
@@ -36,7 +49,7 @@
     + Đơn sách
 - Dưới đây là mô hình dữ liệu quan hệ:
 
-### Thể loại
+### a. Thể loại
 
 | Gid | TheLoai |
 |---|---|
@@ -44,27 +57,29 @@
 | TT | Tiểu thuyết |
 | ... | ... |
 
-Bảng Thể loại lưu trữ những thông tin liên quan đến các thể loại truyện với các cột thuộc tính là mã viết tắt (Gid) với tên thể loại (TheLoai).
+> Bảng ***Thể loại*** lưu trữ những thông tin liên quan đến các thể loại truyện với các cột thuộc tính là ***mã thể loại*** (Gid) với ***tên thể loại*** (TheLoai).
 
-### Tác giả
+### b. Tác giả
+
 | Aid | TacGia |
 |---|---|
 | 1 | William Shakespeare |
 | 2 | Charles Dickens |
 | ... | ... |
 
-Bảng Tác giả lưu trữ tên của các tác giả với các cột thuộc tính là mã định danh (Aid) và tên tác giả (TacGia).
+> Bảng ***Tác giả*** lưu trữ tên của các tác giả với các cột thuộc tính là ***mã định danh*** (Aid) và ***tên tác giả*** (TacGia).
 
-### Hạn mức
+### c. Hạn mức
+
 | Did | HanMuc |
 |---|---|
 | 100 | 1 |
 | 200 | 2 |
 | ... | ... |
 
-Bảng Hạn mức lưu trữ số lượng ngày được mượn sách với các cột thuộc tính là mã ngày (Did) và số ngày tối đa được mượn hay còn gọi là hạn mức (HanMuc).
+> Bảng ***Hạn mức*** lưu trữ số lượng ngày được mượn sách với các cột thuộc tính là ***mã ngày*** (Did) và ***số ngày tối đa được mượn*** hay còn gọi là hạn mức (HanMuc).
 
-### Sách
+### d. Sách
 
 | Bid | TenSach | Gid | Did | Aid |
 |---|---|---|---|---|
@@ -72,9 +87,9 @@ Bảng Hạn mức lưu trữ số lượng ngày được mượn sách với c
 | 002 | Biến hình | TN | 200 | 4 |
 | ... | ... | ... | ... | ... |
 
-Bảng Tên sách và bảng Thể loại có chung thuộc tính Gid, bên cạnh đó bảng Tên sách và bảng Tác giả có chung thuộc tính Aid, cuối cùng bảng Tên sách và bảng Hạn mức có chung thuộc tính Did.
+> Bảng ***Sách*** và bảng Thể loại có chung thuộc tính ***Gid***, bên cạnh đó bảng Tên sách và bảng Tác giả có chung thuộc tính ***Aid***, cuối cùng bảng Tên sách và bảng Hạn mức có chung thuộc tính ***Did***.
 
-### Khách hàng
+### e. Khách hàng
 
 | Id | TenKhachHang | NgayDangKy | NgayHetHan |
 |---|---|---|---|
@@ -82,9 +97,9 @@ Bảng Tên sách và bảng Thể loại có chung thuộc tính Gid, bên cạ
 | 2 | Trần Thị B | 2022/05/15 | 2025/04/30 |
 | ... | ... | ... | ... |
 
-Bảng tên khách hàng lưu trữ thông tin về khách hàng với các cột thuộc tính là mã định danh (id), họ và tên khách hàng (TenKhachHang), ngày đăng ký (NgayDangKy) và  ngày hết hạn (NgayHetHan).
+> Bảng ***Khách hàng*** lưu trữ thông tin về khách hàng với các cột thuộc tính là ***mã định danh*** (id), ***họ và tên khách hàng*** (TenKhachHang), ***ngày đăng ký*** (NgayDangKy) và  ***ngày hết hạn*** (NgayHetHan).
 
-### Đơn sách
+### f. Đơn sách
 
 | Id | Bid | NgayMuon |
 |---|---|---|
@@ -92,11 +107,14 @@ Bảng tên khách hàng lưu trữ thông tin về khách hàng với các cộ
 | 9 | 18 | 2023-10-13 |
 | ... | ... | ... |
 
-Bảng đơn sách lưu trữ thông tin về các đơn mượn sách với các cột thuộc tính là mã đơn sách (id), mã sách (bid) và ngày mượn (NgayMuon).
+> Bảng ***Đơn sách*** lưu trữ thông tin về các đơn mượn sách với các cột thuộc tính là ***mã đơn sách*** (id), ***mã sách*** (bid) và ***ngày mượn*** (NgayMuon).
+
+<br/>
 
 ## 2. Code
+[Link code ở OneCompiler](https://onecompiler.com/mysql/42zk3p857)
 
-### Khởi tạo cơ sở dữ liệu
+### a. Khởi tạo cơ sở dữ liệu
 
 ```sql
 CREATE TABLE khachhang (
@@ -146,7 +164,7 @@ CREATE TABLE no (
 );
 ```
 
-### Thêm dữ liệu mẫu vào cơ sở dữ liệu
+### b. Thêm dữ liệu mẫu vào cơ sở dữ liệu
 
 ```sql
 INSERT INTO tacgia(hovaten) VALUES 
@@ -221,7 +239,7 @@ CROSS JOIN sach s
 LIMIT 12;   
 ```
 
-### 5 truy vấn đơn giản
+### c. 5 truy vấn đơn giản
 
 ```sql
 -- Truy vấn 5 tác giả đầu
@@ -290,7 +308,7 @@ Outputs
 +-----+------------------------------+---------------------+
 ```
 
-### 3 truy vấn nâng cao
+### d. 3 truy vấn nâng cao
 
 ```sql
 -- Truy vấn thể loại và tác giả của cuốn sách mà khách hàng đang mượn
