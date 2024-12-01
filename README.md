@@ -1,16 +1,3 @@
-<style>
-    table {
-        width: 100%;
-    }
-    body{
-      max-width: 700px;
-      margin: 0 auto;
-    }
-    h3, h1 {
-      text-align: center;
-    }
-</style>
-
 # Báo cáo tin học lớp 11A1<br/>Năm học 2024-2025
 <br/>
 
@@ -91,6 +78,7 @@ Bảng tên khách hàng lưu trữ thông tin về khách hàng với các cộ
 | 10 | 19 | 2023-07-11 |
 | 9 | 18 | 2023-10-13 |
 | ... | ... | ... |
+
 Bảng đơn sách lưu trữ thông tin về các đơn mượn sách với các cột thuộc tính là mã đơn sách (id), mã sách (bid) và ngày mượn (NgayMuon).
 
 ## 2. Code
