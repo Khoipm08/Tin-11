@@ -320,8 +320,7 @@ LEFT JOIN tacgia ON sach.aid = tacgia.aid LIMIT 5;
 
 -- Truy vấn sách đang mượn, ngày mượn và ngày trả (dựa trên ngày mượn và hạn mức) của khách hàng
 SELECT no.id id, khachhang.hovaten Họ_và_tên_khách_hàng, 
-sach.tensach Sách_mượn, 
-no.ngaymuon Ngày_mượn, 
+sach.tensach Sách_mượn, no.ngaymuon Ngày_mượn, 
 DATE_ADD(no.ngaymuon, INTERVAL FLOOR(hanmuc.hanmuc) DAY) Ngày_trả
 FROM no 
 LEFT JOIN khachhang ON no.id = khachhang.id
