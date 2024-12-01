@@ -3,11 +3,14 @@
         width: 100%;
     }
     body{
-      max-width: 700px;
+      max-width: 600px;
       margin: 0 auto;
     }
     h1 {
       text-align: center;
+    }
+    p {
+      text-justify: inter-character;
     }
 </style>
 
@@ -57,7 +60,7 @@
 | TT | Tiểu thuyết |
 | ... | ... |
 
-> Bảng ***Thể loại*** lưu trữ những thông tin liên quan đến các thể loại truyện với các cột thuộc tính là ***mã thể loại*** (Gid) với ***tên thể loại*** (TheLoai).
+Bảng ***Thể loại*** lưu trữ những thông tin liên quan đến các thể loại truyện với các cột thuộc tính là ***mã thể loại*** (Gid) với ***tên thể loại*** (TheLoai).
 
 ### b. Tác giả
 
@@ -67,7 +70,7 @@
 | 2 | Charles Dickens |
 | ... | ... |
 
-> Bảng ***Tác giả*** lưu trữ tên của các tác giả với các cột thuộc tính là ***mã định danh*** (Aid) và ***tên tác giả*** (TacGia).
+Bảng ***Tác giả*** lưu trữ tên của các tác giả với các cột thuộc tính là ***mã định danh*** (Aid) và ***tên tác giả*** (TacGia).
 
 ### c. Hạn mức
 
@@ -77,7 +80,7 @@
 | 200 | 2 |
 | ... | ... |
 
-> Bảng ***Hạn mức*** lưu trữ số lượng ngày được mượn sách với các cột thuộc tính là ***mã ngày*** (Did) và ***số ngày tối đa được mượn*** hay còn gọi là hạn mức (HanMuc).
+Bảng ***Hạn mức*** lưu trữ số lượng ngày được mượn sách với các cột thuộc tính là ***mã ngày*** (Did) và ***số ngày tối đa được mượn*** hay còn gọi là hạn mức (HanMuc).
 
 ### d. Sách
 
@@ -87,7 +90,7 @@
 | 002 | Biến hình | TN | 200 | 4 |
 | ... | ... | ... | ... | ... |
 
-> Bảng ***Sách*** và bảng Thể loại có chung thuộc tính ***Gid***, bên cạnh đó bảng Tên sách và bảng Tác giả có chung thuộc tính ***Aid***, cuối cùng bảng Tên sách và bảng Hạn mức có chung thuộc tính ***Did***.
+Bảng ***Sách*** và bảng Thể loại có chung thuộc tính ***Gid***, bên cạnh đó bảng Tên sách và bảng Tác giả có chung thuộc tính ***Aid***, cuối cùng bảng Tên sách và bảng Hạn mức có chung thuộc tính ***Did***.
 
 ### e. Khách hàng
 
@@ -97,7 +100,7 @@
 | 2 | Trần Thị B | 2022/05/15 | 2025/04/30 |
 | ... | ... | ... | ... |
 
-> Bảng ***Khách hàng*** lưu trữ thông tin về khách hàng với các cột thuộc tính là ***mã định danh*** (id), ***họ và tên khách hàng*** (TenKhachHang), ***ngày đăng ký*** (NgayDangKy) và  ***ngày hết hạn*** (NgayHetHan).
+Bảng ***Khách hàng*** lưu trữ thông tin về khách hàng với các cột thuộc tính là ***mã định danh*** (id), ***họ và tên khách hàng*** (TenKhachHang), ***ngày đăng ký*** (NgayDangKy) và  ***ngày hết hạn*** (NgayHetHan).
 
 ### f. Đơn sách
 
@@ -107,7 +110,7 @@
 | 9 | 18 | 2023-10-13 |
 | ... | ... | ... |
 
-> Bảng ***Đơn sách*** lưu trữ thông tin về các đơn mượn sách với các cột thuộc tính là ***mã đơn sách*** (id), ***mã sách*** (bid) và ***ngày mượn*** (NgayMuon).
+Bảng ***Đơn sách*** lưu trữ thông tin về các đơn mượn sách với các cột thuộc tính là ***mã đơn sách*** (id), ***mã sách*** (bid) và ***ngày mượn*** (NgayMuon).
 
 <br/>
 
